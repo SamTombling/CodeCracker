@@ -14,21 +14,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_shiftLeft_clicked()
+void MainWindow::init()
 {
-    Encrypter* encrypter = new Encrypter(ui->cypherText->toPlainText());
-    encrypter->substitution(-1);
-    ui->plainText->clear();
-    ui->plainText->append(encrypter->cypherText());
-    delete encrypter;
+
 }
 
-void MainWindow::on_shiftRight_clicked()
+void MainWindow::on_encryptButton_clicked()
 {
-    Encrypter* encrypter = new Encrypter(ui->cypherText->toPlainText());
-    encrypter->substitution(1);
+    Encrypter* e = new Encrypter(ui->cypherText->toPlainText());
+    e->setShifts(ui->spinBox->value());
+    e->substitution();
     ui->plainText->clear();
-    ui->plainText->append(encrypter->cypherText());
-    delete encrypter;
+    ui->plainText->append(e->cypherText());
 }
 

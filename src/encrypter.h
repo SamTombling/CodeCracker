@@ -9,16 +9,19 @@ public:
     Encrypter(const QString &plainText);
 
     // Public Member Functions
-    void substitution(int shifts);
+    void substitution();
 
     // Getters
     QString cypherText() const;
+
+    void setShifts(int newShifts);
 
 private:
 
     // Member variables
     QString m_plainText;
     QString m_cypherText = "";
+    int m_shifts;
 
     // Private Member Functions
 };

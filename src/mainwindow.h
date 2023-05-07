@@ -15,10 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_shiftLeft_clicked();
+    void init();
 
-    void on_shiftRight_clicked();
+private slots:
+
+    void on_encryptButton_clicked();
 
 private:
     Ui::MainWindow *ui;

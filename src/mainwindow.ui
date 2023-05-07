@@ -32,16 +32,29 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QPushButton" name="shiftLeft">
+          <widget class="QPushButton" name="encryptButton">
            <property name="text">
-            <string>&lt; Shift Left</string>
+            <string>Encrypt</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="shiftRight">
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>Shift Right &gt;</string>
+            <string>Shift</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>25</number>
            </property>
           </widget>
          </item>
